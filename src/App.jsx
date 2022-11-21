@@ -1,5 +1,5 @@
 import { useState } from 'react'
-
+import { AppRoutes } from './routes/routes'
 import './App.css'
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Pokemon</h1>
+      <AppRoutes/>
     </div>
   )
 }
