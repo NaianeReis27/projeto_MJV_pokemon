@@ -1,12 +1,14 @@
-import { useState } from 'react'
-import { AppRoutes } from './routes/routes'
-import './App.css'
+
+import  AppRoutes  from './routes/routes'
+import Global from './Global'
+
 
 function App() {
 
 
   return (
     <div className="App">
+      <Global/>
       <AppRoutes/>
     </div>
   )
