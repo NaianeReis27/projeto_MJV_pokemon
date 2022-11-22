@@ -1,6 +1,7 @@
-export const LandingPage = () => {
-  
-  return (
-   <h1>landing Page</h1>
-  );
+import NavBar from "../components/NavBar";
+
+const LandingPage = () => {
+  return <NavBar styles={{ "background-color": "var(--main-color)" }}></NavBar>;
 };
+
+export default LandingPage;
