@@ -1,5 +1,7 @@
 import { Container } from "./styles";
 import Logo from "../../assets/logoPokemon.svg";
+import { Link } from "react-router-dom";
+
 
 const NavBar = ({ styles }) => {
   return (
@@ -10,16 +12,16 @@ const NavBar = ({ styles }) => {
         </figure>
         <ul>
           <li>
-            <a>Inicio</a>
+            <Link to="/">Início</Link>
           </li>
           <li>
-            <a>Pokedex</a>
+            <Link to="/pokedex">Pokedex</Link>
           </li>
           <li>
-            <a>Sobre</a>
+            <Link to="/">Sobre</Link>
           </li>
           <li>
-            <a>Login</a>
+            <Link to="/">Login</Link>
           </li>
         </ul>
       </div>
