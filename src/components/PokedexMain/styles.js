@@ -9,5 +9,5 @@ export const Container = styled.div`
   padding: 0 40px;
   margin: 80px auto;
   gap: 20px;
-  flex-wrap: wrap-reverse;
+  flex-wrap: wrap;
 `;

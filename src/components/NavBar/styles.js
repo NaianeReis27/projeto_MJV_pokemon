@@ -8,12 +8,12 @@ export const Container = styled.div`
   ${({ styles }) => styles}
 
   div {
-    max-width: 1200px;
+    max-width: 1350px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 0 50px;
+    padding: 0 20px 0 40px;
     @media (max-width: 715px) {
       justify-content: center;
     }
@@ -43,6 +43,7 @@ export const Container = styled.div`
 
       a {
         padding-left: 20px;
+        text-decoration: none;
         ${({ styles }) => styles}
         font-weight: 600;
       }

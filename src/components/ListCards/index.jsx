@@ -4,12 +4,19 @@ import { useContext } from "react";
 import { ApiContext } from "../../context/api.context";
 
 const ListCards = ({ img }) => {
-  const { cards } = useContext(ApiContext)
+  const {cardsFilter, changePage } = useContext(ApiContext)
+ 
   return (
     <Container>
       {
-        cards.map(ele => <CardPokemon key={ele.name} id={ele.name} data={ele}/>)
+        cardsFilter?.map((ele, index) => <CardPokemon key={index} data={ele}/>)
       }
+      <div>
+      <button className="btn_next"onClick={()=> changePage("previous")}>previous</button>
+      <button className="btn_next" onClick={()=> changePage("next")}>next</button>
+      
+      </div>
+    
     </Container>
   );
 };

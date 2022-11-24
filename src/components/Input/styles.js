@@ -17,18 +17,20 @@ export const Container = styled.div`
     color: var(--blue-color);
     border: none;
     padding: 0 15px;
-    
   }
 
-  figure {
+  button {
     display: flex;
     justify-content: center;
+    border: none;
+    background: none;
     align-items: center;
     width: 45px;
     height: 45px;
     cursor: pointer;
     img{
-      width: 100%;
+      width: 140%;
+      cursor: pointer;
     }
   }
 `;

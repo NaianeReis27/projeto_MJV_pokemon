@@ -8,13 +8,11 @@ export const Container = styled.li`
   height: 243px;
   border: solid var(--blue-color) 2px;
   overflow: hidden;
-  margin: 0 auto;
   border-radius: 20px;
   cursor: pointer;
-  background-color: aliceblue;
 
   &:hover{
-    background-color: aqua;
+    background-color: var(--yellow-color);
   }
 
   figure {
@@ -23,7 +21,7 @@ export const Container = styled.li`
     align-items: center;
     margin: -30px 0 0 0;
     img {
-      width: 80%;
+      width: 70%;
       image-rendering: pixelated;
   
     }

@@ -13,6 +13,7 @@ export default createGlobalStyle`
   --main-color: #E74349;
   --blue-color: #1F2773;
   --font-color: #F2E6FA;
+  --yellow-color: #F8C338;
   }
 
   body, input, button{

@@ -6,14 +6,14 @@ const CardPokemon = ({ data }) => {
   const { chooseCard } = useContext(ApiContext);
 
   return (
-    <Container onClick={() => chooseCard(data.id)}>
+    <Container onMouseMove={() => chooseCard(data.id)}>
       <figure>
         <img src={data.sprites.front_default} alt="Icon_Pokebola" />
       </figure>
       <div>
         <span>{`Num ${data.id}`}</span>
         <h2>{data.name}</h2>
-        <button>Grama</button>
+        <button>{data.types[0].type.name}</button>
       </div>
     </Container>
   );
