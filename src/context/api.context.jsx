@@ -5,19 +5,20 @@ import React from "react";
 
 export const ApiContext = createContext({});
 
-export default function ApiContextProvider({ children }) {
+export default function ApiContextProvider({ children }){
+
   const [cards, setCards] = useState([]);
   const [page, setPage] = useState(0);
-  const [pageFilter, setPageFilter] = useState(0);
-  const [limit, setLimit] = useState(20);
   const [cardSelect, setCardSelect] = useState(null);
-  const [inputSearch, setInputSearch] = useState("");
   const [cardsFilter, setCardsFilter] = useState([]);
   const [listAllPokemons, setListAllPokemons] =useState([])
-
+  const [loading , setLoading] = useState(true)
+  const [modalPokedex , setModalPokedex] = useState(false)
 
   useEffect(() => {
-   setCardsFilter(cards)
+    if(cards.length>1){
+      setCardsFilter(cards)
+    }
   }, [cards]);
 
   useEffect(() => {
@@ -25,7 +26,7 @@ export default function ApiContextProvider({ children }) {
       .get(`/pokemon?offset=${page*36}&limit=36`)
       .then((res) => {
         res.data.results.map((ele) => getCards(ele.name, setCards));
-        console.log(page)
+        setLoading(false)
       })
       .catch((err) => console.log(err));
   }, [page]);
@@ -64,7 +65,7 @@ export default function ApiContextProvider({ children }) {
   const inputChange = (e) => {
     setCardsFilter([])
     setPage(0)
-    const filtered = listAllPokemons.filter( ele => ele.name.includes(e.target.value))
+    const filtered = listAllPokemons.filter( ele => ele.name.includes(e.target.value.toLowerCase()))
     filtered.slice(0, 72).map(ele => getCards(ele.name, setCardsFilter))
   };
 
@@ -90,7 +91,9 @@ export default function ApiContextProvider({ children }) {
         chooseCard,
         cardSelect,
         inputChange,
-      
+        loading,
+        modalPokedex,
+        setModalPokedex
       }}
     >
       {children}

@@ -18,10 +18,10 @@ const NavBar = ({ styles }) => {
             <Link to="/pokedex">Pokedex</Link>
           </li>
           <li>
-            <Link to="/">Sobre</Link>
+            <Link to="/about">Sobre</Link>
           </li>
           <li>
-            <Link to="/">Login</Link>
+            <Link to="/login">Login</Link>
           </li>
         </ul>
       </div>

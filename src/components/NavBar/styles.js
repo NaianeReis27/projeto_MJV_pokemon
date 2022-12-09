@@ -1,19 +1,32 @@
 import styled from "styled-components";
+import { keyframes } from "styled-components";
 import pokebola from "../../assets/pokebola.svg";
+
+const slideTop = keyframes`
+  0% {
+            opacity: 0;
+  }
+  100% {
+            opacity: 1;
+  }
+`;
+
 export const Container = styled.div`
   width: 100%;
   height: auto;
   justify-content: center;
   padding: 15px 0px 15px 0;
+  animation-name: ${slideTop };
+  animation-duration: .5s;
   ${({ styles }) => styles}
 
   div {
-    max-width: 1350px;
+    max-width: 1326px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 0 20px 0 40px;
+    padding: 0 20px 0 10px;
     @media (max-width: 715px) {
       justify-content: center;
     }
@@ -29,7 +42,7 @@ export const Container = styled.div`
 
       li:hover::before {
         visibility: visible;
-        transition: 0.5;
+        transition: 1.5;
       }
 
       li::before {

@@ -1,17 +1,21 @@
-import styled from "styled-components";
+
+import styled, { keyframes } from 'styled-components'
+
 
 export const Container = styled.li`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 196px;
-  height: 243px;
+  width: 200px;
+  height: 250px;
+  padding: 15px;
   border: solid var(--blue-color) 2px;
   overflow: hidden;
   border-radius: 20px;
   cursor: pointer;
+  
 
-  &:hover{
+  &:hover {
     background-color: var(--yellow-color);
   }
 
@@ -23,16 +27,15 @@ export const Container = styled.li`
     img {
       width: 70%;
       image-rendering: pixelated;
-  
     }
   }
 
   div {
-    margin: -10px 0 0 0;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    gap:5px;
+    gap: 5px;
+
     button {
       background-color: var(--blue-color);
       width: 90px;
@@ -42,10 +45,21 @@ export const Container = styled.li`
       padding: 5px;
     }
     span,
-    h2{
+    h2 {
       text-align: center;
       color: var(--blue-color);
     }
+    div{
+      max-width: none;
+      width: auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
 
+      .icons{
+        width: 10px;
+      }
+
+    }
   }
 `;

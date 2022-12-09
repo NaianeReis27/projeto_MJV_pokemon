@@ -1,12 +1,15 @@
 import { Container } from "./styles";
 import CardSelect from "../CardSelect";
 import ListCards from "../ListCards";
+import PokedexSvg from "../PokedexSvg";
 
 const PokedexMain = () => {
+
   return (
     <Container>
-      <ListCards/>
-      <CardSelect/>
+      <ListCards />
+      <CardSelect />
+      <PokedexSvg/>
     </Container>
   );
 };
