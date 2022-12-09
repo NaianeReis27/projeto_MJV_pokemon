@@ -1,12 +1,12 @@
 import NavBar from "../components/NavBar";
 
-const LandingPage = () => {
+const LoginPage = () => {
   return (
     <>
       <NavBar styles={{ "background-color": "var(--main-color)" }}/>;
-      <h5>Início</h5>
+      <h5>Login</h5>
     </>
   );
 };
 
-export default LandingPage;
+export default LoginPage;

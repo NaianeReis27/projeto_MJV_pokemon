@@ -4,13 +4,19 @@ import { useContext } from "react";
 import { ApiContext } from "../../context/api.context";
 
 const ListCards = ({ img }) => {
-  const { cards } = useContext(ApiContext)
+  const {cardsFilter,loading, modalPokedex } = useContext(ApiContext)
   return (
+    
     <Container>
       {
-        cards.map(ele => <CardPokemon key={ele.name} id={ele.name} data={ele}/>)
+        !loading?
+        cardsFilter?.map((ele, index) => <CardPokemon key={index} index={index} data={ele}/>)
+        :
+        <h5>loading...</h5>
       }
     </Container>
+    
+   
   );
 };
 

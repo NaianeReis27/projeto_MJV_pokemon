@@ -1,55 +1,78 @@
 import styled from "styled-components";
 
-
 export const Container = styled.div`
   display: flex;
-  position: sticky;
-  bottom:60px;
+  max-width: 300px;
   flex-direction: column;
-  align-items: center;
-  max-width: 350px;
-  height: 560px;
-  width: 100%;
-  border: solid var(--blue-color) 2px;
+  position: absolute;
+  top: 280px;
+  left: 0px;
+  right: -958px;
+  height: 503px;
+  gap: 16px;
   margin: 0 auto;
-  border-radius: 20px;
+  padding: 12px;
+  justify-content: center;
+  background: rgb(64, 99, 200);
+  background: linear-gradient(
+    24deg,
+    rgba(64, 99, 200, 1) 0%,
+    rgba(89, 243, 255, 1) 100%
+  );
+  border: solid #a80003 6px;
+  border-radius: 18px;
 
-  @media (max-width: 1366px) {
-      flex-direction: row;
-      max-width: 600px;
-      padding: 20px;
-      justify-content: space-between;
-      height: 300px;
-  }
-
-  @media (max-width: 600px) {
+  figure {
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    ul {
+      display: flex;
       flex-direction: column;
-      max-width: 600px;
-      padding: 20px;
-      justify-content: space-evenly;
+      gap: 5px;
+      justify-content: center;
     }
-
-  img{
-    margin-top: -130px;
-    width: 250px;
-    image-rendering: pixelated;
-   
-    @media (max-width: 1366px) {
-      margin-top: 0;
-      width: 200px;
+    img {
+      height: 100%;
+      image-rendering: pixelated;
+      cursor: pointer;
     }
   }
 
-  div{
-    margin-top: -25px;
+  div {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    gap: 10px;
+
+    div {
+      flex-direction: row;
+
+      .ability {
+        flex-direction: row;
+        display: flex;
+        padding: 8px;
+        color: #000000;
+        background: none;
+        border: 1px solid #5e9067;
+        border-radius: 20px;
+        margin: 5px;
+      }
+    }
   }
-  
-  span,h2,button{
+
+  button {
+    padding: 8px;
+    color: white;
+    background: #5e9067;
+    border: none;
+    border-radius: 20px;
+    font-weight: 600px;
+  }
+
+  span,
+  h2 {
     text-align: center;
-    color:var(--blue-color)
+    color: white;
+    font-size: 16px;
   }
-  
 `;
