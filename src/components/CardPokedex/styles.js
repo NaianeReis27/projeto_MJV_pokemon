@@ -45,6 +45,7 @@ export const Container = styled.li`
       padding: 5px;
     }
     span,
+    
     h2 {
       text-align: center;
       color: var(--blue-color);

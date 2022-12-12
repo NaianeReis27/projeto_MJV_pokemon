@@ -1,5 +1,4 @@
 import styled from "styled-components";
-
 export const Container = styled.div`
   display: flex;
   max-width: 300px;
@@ -35,44 +34,14 @@ export const Container = styled.div`
     img {
       height: 100%;
       image-rendering: pixelated;
-      cursor: pointer;
+      cursor:zoom-in
     }
   }
-
-  div {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-
-    div {
-      flex-direction: row;
-
-      .ability {
-        flex-direction: row;
-        display: flex;
-        padding: 8px;
-        color: #000000;
-        background: none;
-        border: 1px solid #5e9067;
-        border-radius: 20px;
-        margin: 5px;
-      }
+  div{
+    h2{
+      margin-top: -25px;
+      text-align: center;
+      font-size: 25px;
     }
-  }
-
-  button {
-    padding: 8px;
-    color: white;
-    background: #5e9067;
-    border: none;
-    border-radius: 20px;
-    font-weight: 600px;
-  }
-
-  span,
-  h2 {
-    text-align: center;
-    color: white;
-    font-size: 16px;
   }
 `;

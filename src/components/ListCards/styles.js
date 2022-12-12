@@ -1,5 +1,10 @@
-import styled from "styled-components";
+import styled, {keyframes} from "styled-components";
 
+const text = keyframes`
+  50% {
+            opacity: 0;
+  }
+`;
 
 export const Container = styled.ul`
   display: flex;
@@ -22,14 +27,20 @@ export const Container = styled.ul`
    display: none;
   }
 
-  ${({ styles }) => styles}
   div{
-    max-width: 400px;
+    img{
+      width: 200px;
+    }
     display: flex;
-    justify-content:space-between;
-    width: 100%;
-    .btn_next{
-      color: black;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    h4{
+      text-align: center;
+      color:black;
+      font-size: 22px;
+      animation: ${text} 1.5s ease-in-out infinite;
     }
   }
 `;

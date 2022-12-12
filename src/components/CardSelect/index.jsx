@@ -6,7 +6,7 @@ import IconTypes from "../IconTypes";
 
 const CardSelect = () => {
   const { cardSelect , setModalPokedex } = useContext(ApiContext);
- 
+  
   return (
     <Container>
       {cardSelect && (
@@ -20,15 +20,7 @@ const CardSelect = () => {
             <img src={cardSelect.sprites.front_default} alt="Icon_Pokebola" />
           </figure>
           <div>
-           
             <h2>{cardSelect.name}</h2>
-            <h2>abilities</h2>
-            <div>
-              {cardSelect.abilities.map((ele) => (
-                <button className="ability">{ele.ability.name}</button>
-              ))}
-            </div>
-           
             {cardSelect.stats.map((ele) => (
               <InfoCard data={ele} className="static" />
             ))}
