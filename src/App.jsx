@@ -3,6 +3,7 @@ import {Global} from "./Global";
 import PokedexContextProvider from "./context/pokedex.context";
 
 
+
 function App() {
   return (
     <div className="App">

@@ -16,8 +16,7 @@ export const Container = styled.div`
   height: auto;
   justify-content: center;
   padding: 15px 0px 15px 0;
-  animation-name: ${slideTop };
-  animation-duration: .5s;
+  animation-name: ${slideTop};
   ${({ styles }) => styles}
 
   div {
