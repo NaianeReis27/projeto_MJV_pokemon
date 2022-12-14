@@ -3,6 +3,8 @@ import { useContext } from "react";
 import { Container } from "./styles";
 import InfoCard from "../InfoCard";
 import IconTypes from "../IconTypes";
+import { ImSearch } from "react-icons/im";
+
 
 const CardSelect = () => {
   const { cardSelect , setModalPokedex } = useContext(PokedexContext);
@@ -11,7 +13,10 @@ const CardSelect = () => {
     <Container>
       {cardSelect && (
         <>
+       
+          <h3 className="title_detalhes">Detalhes</h3>
           <figure onClick={()=>{setModalPokedex(true)}}>
+            <ImSearch className="search"/>
           <ul>
               {cardSelect.types.map((ele) => (
                 <IconTypes size={1} type={ele.type.name}></IconTypes>

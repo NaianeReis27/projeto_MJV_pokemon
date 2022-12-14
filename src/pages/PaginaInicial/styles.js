@@ -11,7 +11,7 @@ nav {
  .pokebola{  
     
      background-color: var(--main-color);
-    
+     height: 100px;
      transition: all 0.5s ease-out;
      overflow: hidden;   
      animation-name: div;
@@ -20,8 +20,8 @@ nav {
  
  }
  @keyframes div {
-    0% {visibility:visible; }
-    25% {visibility: visible; opacity: 1; height: 800px;}
+    0% {visibility:visible;}
+    25% {visibility: visible; opacity: 1; height: 600px;}
    // 50% {visibility: visible; opacity: 1; height: 600px;}
     //75% {visibility: visible; opacity: 1; height: 400px;}
     100% {visibility: visible; opacity: 1; height: 300px; }
@@ -39,8 +39,7 @@ nav {
 
  button {
     background:#1F2773;
-
-    margin-top: 100px;
+    margin-top: 10%;
     animation-name: button;
     animation-duration: 3s;
     animation-fill-mode: both;

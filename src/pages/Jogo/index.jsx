@@ -5,7 +5,7 @@ import SegundoJogador from "../../components/SegundoJogador"
 import ModalJogo from "../../components/ModalJogo"
 import Pikachu from "../../assets/Pikachu.png";
 import EquipeRocket from "../../assets/EquipeRocket.png";
-import { Button } from "../../styles/button";
+import { Button } from "../../styles";
 import NavBar from "../../components/NavBar";
 
 

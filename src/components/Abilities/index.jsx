@@ -12,7 +12,6 @@ const Abilities = ({ data }) => {
     getAbilities(data.ability.name, setDescription);
   }, []);
 
-  console.log(description);
   return (
     description && (
       <Container>

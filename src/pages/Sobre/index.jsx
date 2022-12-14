@@ -1,10 +1,11 @@
 import NavBar from "../../components/NavBar";
-import { Imagem } from "../../Components/Pokebola";
+import { Imagem } from "../../components/Pokebola";
 import TreinadoraIsabella from "../../components/TreinadoraIsabella";
 import { Amarrar, Aside, Section } from "./styles";
 import Naiane from "../../assets/naianeperfil.jpg"
-import { BsLinkedin } from "react-icons/Bs";
-import { AiFillGithub } from "react-icons/Ai";
+import { BsLinkedin } from "react-icons/bs";
+import { AiFillGithub } from "react-icons/ai";
+
 
 
 
