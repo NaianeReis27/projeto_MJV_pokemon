@@ -17,15 +17,26 @@ export const Container = styled.div`
   background: linear-gradient(
     24deg,
     rgba(64, 99, 200, 1) 0%,
-    rgba(89, 243, 255, 1) 100%
+    rgba(89, 242, 255, 1) 100%
   );
   border: solid var(--border-color) 6px;
   border-radius: 18px;
 
+  .title_detalhes{
+    text-align: center;
+  }
   figure {
     height: 160px;
     display: flex;
     justify-content: center;
+    cursor: pointer;
+
+    .search{
+      position: relative;
+      font-size: 25px;
+      right: 35px;
+      left: 187px;
+    }
     ul {
       display: flex;
       flex-direction: column;
@@ -35,7 +46,6 @@ export const Container = styled.div`
     img {
       height: 100%;
       image-rendering: pixelated;
-      cursor:zoom-in
     }
   }
   div{
