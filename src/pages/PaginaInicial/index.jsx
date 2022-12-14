@@ -1,22 +1,21 @@
 import { Container, Inicio } from "./styles";
 import cinturapoke from "../../assets/cinturapoke.png"
-import { Button } from "../../styles/button";
+import { Button } from "../../Styles";
 import NavBar from "../../components/NavBar";
-import { Link } from "react-router-dom";
-import Jogo from "../Jogo";
-import { useState } from 'react';
+import { useNavigate } from "react-router-dom";
 
 
 
 const PaginaInicial = () => {
+    const navigate = useNavigate();
+    const gameRoute = () => {
+        navigate('/game')
+    }
 
-    const[openGame,setOpenGame] = useState(false);
-
-
-    
+     
     
     return(
-        !openGame ? (
+      
 
             <Inicio>
     
@@ -29,14 +28,15 @@ const PaginaInicial = () => {
     
         </Container>
         <div className="alinhar-botao">
+
     
-        <Button variant='primary' onClick={()=> setOpenGame(true)}> JOGAR ! </Button>
+        <Button variant='primary' onClick={gameRoute}> JOGAR ! </Button>
     
         </div>
     
     
         </Inicio>
-        ) : <Jogo />
+     
 
     )
 

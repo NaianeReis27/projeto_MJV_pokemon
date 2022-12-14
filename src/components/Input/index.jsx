@@ -5,7 +5,7 @@ import { useContext } from "react";
 
 const Input = ({ styles }) => {
 
-  const {inputChange, search} = useContext(PokedexContext);
+  const {inputChange} = useContext(PokedexContext);
 
   return (
     <Container styles={styles}>

@@ -4,10 +4,17 @@ export const Amarrar = styled.div`
 display: flex;
 align-items: center;
 justify-content: space-between;
+max-width: 1300px;
+width: 100%;
+margin: 0 auto 120px auto;
+font-family: 'Inter';
 
 
 h1, h2,h3,h4, p, li, a {
   color: #1F2773;
+  svg{
+    fill:  #1F2773;
+  }
 
 }
 `

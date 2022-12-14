@@ -20,9 +20,6 @@ const NavBar = ({ styles }) => {
           <li>
             <Link to="/about">Sobre</Link>
           </li>
-          <li>
-            <Link to="/login">Login</Link>
-          </li>
         </ul>
       </div>
     </Container>

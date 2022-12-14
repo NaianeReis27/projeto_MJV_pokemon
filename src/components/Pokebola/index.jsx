@@ -1,10 +1,10 @@
 import { Container } from "./styles"
 import Pokebola from '../../assets/Pokebola.png';
 
-export const Imagem = ({}) => {
+export const Imagem = ( ) => {
     return (
         <Container>
-            <img src={Pokebola}alt="pokebola" />
+            <img src={Pokebola} alt="pokebola" />
         </Container>
 
     )

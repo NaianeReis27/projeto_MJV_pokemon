@@ -13,7 +13,7 @@ const Evolutions = () => {
   return (
     <Container>
       {evolutionsList.length > 0 ? (
-        evolutionsList
+        evolutionsList.sort((a,b)=> a.id - b.id)
           .map((ele) => (
             <li className="box_evolution">
               <div className="box_icons">
