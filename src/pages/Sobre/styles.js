@@ -104,15 +104,20 @@ h3 {
   margin-left: 10px;
 }
 
-.icones {
-  display: flex;
+.icones{
+  display:flex;
   justify-content: center;
   align-items: center;
-  color:#1F2773;
+  gap: 15px;
+
 }
-a {
-  height: 40px;
-  width: 40px;
+
+
+svg {
+  height: 30px;
+  width: 30px;
+  fill:#1F2773;
+
 
 }
 

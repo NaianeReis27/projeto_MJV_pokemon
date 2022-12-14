@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <Global />
 
-      <PaginaInicial/>
+      <Sobre/>
       {/*<PokedexContextProvider>
         <Global />
         <AppRoutes />
