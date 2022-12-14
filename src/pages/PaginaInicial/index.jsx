@@ -15,7 +15,7 @@ const PaginaInicial = () => {
         
         <Inicio>
 
-    <NavBar styles={{ "background-color": "var(--main-color)" }}/>;
+    <NavBar styles={{ "background-color": "var(--main-color)" }}/>
 
         <div className="pokebola"/>
 
