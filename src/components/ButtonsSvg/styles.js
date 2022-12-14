@@ -15,7 +15,6 @@ export const Container = styled.div`
     fill: none;
     cursor: pointer;
   }
-
   .btn_pokedex{
     &:hover{
       fill: #48B2F8;
