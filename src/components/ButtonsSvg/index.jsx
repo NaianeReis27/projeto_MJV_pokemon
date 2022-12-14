@@ -1,9 +1,9 @@
 import { Container } from "./styles";
 import { useContext } from "react";
-import { ApiContext } from "../../context/api.context";
+import { PokedexContext } from "../../context/pokedex.context";
 
 const ButtonsSvg = () => {
-  const {changePage, page} = useContext(ApiContext)
+  const {changePage} = useContext(PokedexContext)
 
   return (
     <Container>
