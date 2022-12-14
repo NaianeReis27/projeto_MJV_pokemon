@@ -1,33 +1,41 @@
 import { Container } from "./styles";
-import { ApiContext } from "../../context/api.context";
-import { useContext, useEffect, useState } from "react";
+import { PokedexContext } from "../../context/pokedex.context";
+import { useContext, useState } from "react";
 import IconTypes from "../IconTypes";
+import icon from "../../assets/icon_loading.gif";
 
-const CardPokemon = ({ data, index }) => {
-  const { chooseCard } = useContext(ApiContext);
-
-  const [animateRandom, setAnimateRandom] = useState(null);
-  useEffect(() => {
-    setAnimateRandom(Math.floor(Math.random() * 4));
-  }, []);
+const CardPokemon = ({ data }) => {
+  const { chooseCard } = useContext(PokedexContext);
+  const [loading, setLoading] = useState(true);
 
   return (
-    <Container
-      animateRandom={animateRandom}
-      onClick={() => chooseCard(data.id)}
-    >
-      <figure>
-        <img src={data.sprites.front_default} alt="Icon_Pokebola" />
-      </figure>
-      <div>
-        <span>{`Num ${data.id}`}</span>
-        <h2>{data.name}</h2>
+    <Container onClick={() => chooseCard(data.id)}>
+      <>
+        <figure>
+          <img
+            className={loading ? "loading_img active" : "pokemon_img disable"}
+            src={icon}
+            alt="pokemon"
+          />
+          <img
+            onLoad={() => {
+              setLoading(false);
+            }}
+            className={loading ? "pokemon_img disable" : "pokemon_img active"}
+            src={data.sprites.front_default}
+            alt="pokemon"
+          />
+        </figure>
         <div>
-          {data.types.map((ele) => (
-            <IconTypes size={0.7} type={ele.type.name}></IconTypes>
-          ))}
+          <span>{`Num ${data.id}`}</span>
+          <h2>{data.name}</h2>
+          <div>
+            {data.types.map((ele) => (
+              <IconTypes size={0.7} type={ele.type.name}></IconTypes>
+            ))}
+          </div>
         </div>
-      </div>
+      </>
     </Container>
   );
 };
