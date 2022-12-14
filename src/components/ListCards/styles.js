@@ -1,14 +1,13 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
+const text = keyframes`
+  50% {
+            opacity: 0;
+  }
+`;
 
 export const Container = styled.ul`
   display: flex;
-  max-width: 854px;
-  position: absolute;
-  top: 313px;
-  bottom:0 ;
-  left:-372px;
-  right: 0;
   height: 472px;
   gap: 16px;
   flex-wrap: wrap;
@@ -16,20 +15,30 @@ export const Container = styled.ul`
   overflow-y: auto;
   padding: 12px;
   justify-content: center;
-  border: solid #a80003 6px;
+  width: 856px;
+  left: 0px;
+  position: relative;
+  top: 119px;
+  border: solid var(--border-color) 6px;
 
   &::-webkit-scrollbar {
-   display: none;
+    display: none;
   }
 
-  ${({ styles }) => styles}
-  div{
-    max-width: 400px;
+  div {
+    img {
+      width: 200px;
+    }
     display: flex;
-    justify-content:space-between;
-    width: 100%;
-    .btn_next{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h4 {
+      text-align: center;
       color: black;
+      font-size: 22px;
+      animation: ${text} 1.5s ease-in-out infinite;
     }
   }
 `;

@@ -17,6 +17,7 @@ export const Container = styled.div`
     color: var(--blue-color);
     border: none;
     padding: 0 15px;
+    font-size: 15px;
   }
 
   button {

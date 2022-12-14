@@ -1,8 +1,15 @@
 import { createGlobalStyle, keyframes } from "styled-components";
 
+export const fadeIn = keyframes`
+0% {
+          opacity: 0;
+}
+100% {
+          opacity: 1;
+}
+`;
 
-
-export default createGlobalStyle`
+export const Global = createGlobalStyle`
   * {
     margin: 0;
     padding: 0;
@@ -11,6 +18,15 @@ export default createGlobalStyle`
     color:var(--font-color);
   }
 
+  @font-face {
+  font-family: "Power";
+  src: local("power"),
+  url("../src/fonts/power/powerGreen.ttf") format("truetype");
+  font-weight: bold;
+
+
+}
+
   :root {
   --main-color: #E74349;
   --blue-color: #1F2773;
@@ -18,15 +34,31 @@ export default createGlobalStyle`
   --yellow-color: #F8C338;
   --gray-color: #C8D0C0;
   --white-color: #FFFFFF;
+  --border-color: #C81D23;
   }
 
   body, input, button{
-    font-family: 'Inter', sans-serif;
+    font-family: "Power", "Inter";
   }
+
+
+
+  .text_evolution{
+    font-size: 22px;
+    margin-top: 50px;
+  }
+  .text_loading{
+    color: #1F2773;
+    text-align: center;
+    animation: text 1.5s ease-in-out infinite;
+  }
+
+  
 
   button, a {
     cursor: pointer;
   }
+
   .App{
     width: 100%;
     height:150%;
