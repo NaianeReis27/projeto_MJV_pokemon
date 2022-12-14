@@ -10,14 +10,6 @@ h1, h2,h3,h4, p, li, a {
   color: #1F2773;
 
 }
-
-
-
-
-
-
-
-
 `
 
 export const Section = styled.section`

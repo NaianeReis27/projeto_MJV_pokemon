@@ -1,19 +1,21 @@
 import AppRoutes from "./routes/routes";
 import {Global} from "./Global";
 import PokedexContextProvider from "./context/pokedex.context";
+import Jogo from "./pages/Jogo";
 import PaginaInicial from "./pages/PaginaInicial";
 import Sobre from "./pages/Sobre";
-import LoginPage from "./pages/LoginPage";
-import TreinadoraIsabella from "./components/TreinadoraIsabella";
 
 
 function App() {
   return (
     <div className="App">
-      <PokedexContextProvider>
+      <Global />
+
+      <PaginaInicial/>
+      {/*<PokedexContextProvider>
         <Global />
         <AppRoutes />
-      </PokedexContextProvider>
+  </PokedexContextProvider>*/}
     </div>
   );
 }
