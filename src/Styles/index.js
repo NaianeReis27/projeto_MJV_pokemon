@@ -22,6 +22,24 @@ const ButtonStyled = {
      width: 290px;
      height: 45px;
 
+     border: none;
+     border-radius: 5px;
+     box-shadow: 0 1px 3px rgba();
+     background-color: var(--color-secundary);
+     color: #ffffff;
+     font-size: 1.2rem;
+     cursor:pointer;
+
+
+      :hover{
+       padding: 0.8rem 1.5rem;
+       border: 1px solid #ffffff;
+       border-radius: 5px;
+       box-shadow: 0 1px 3px rgba();
+       font-size: 1.2rem;
+
+}
+
     `,
   
 

@@ -7,6 +7,7 @@ justify-content: space-between;
 max-width: 1300px;
 width: 100%;
 margin: 0 auto 120px auto;
+font-family: 'Inter';
 
 
 h1, h2,h3,h4, p, li, a {
@@ -16,14 +17,6 @@ h1, h2,h3,h4, p, li, a {
   }
 
 }
-
-
-
-
-
-
-
-
 `
 
 export const Section = styled.section`
@@ -118,15 +111,20 @@ h3 {
   margin-left: 10px;
 }
 
-.icones {
-  display: flex;
+.icones{
+  display:flex;
   justify-content: center;
   align-items: center;
-  color:#1F2773;
+  gap: 15px;
+
 }
-a {
-  height: 40px;
-  width: 40px;
+
+
+svg {
+  height: 30px;
+  width: 30px;
+  fill:#1F2773;
+
 
 }
 

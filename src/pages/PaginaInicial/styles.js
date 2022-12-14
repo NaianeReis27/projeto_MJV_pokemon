@@ -39,7 +39,7 @@ nav {
 
  button {
     background:#1F2773;
-    margin-top: 100px;
+    margin-top: 10%;
     animation-name: button;
     animation-duration: 3s;
     animation-fill-mode: both;
