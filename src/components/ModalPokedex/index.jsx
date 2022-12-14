@@ -1,18 +1,20 @@
 import { Container } from "./styles";
-import Close from "../Close";
-import barra from "../../assets/barra.svg";
 import { useContext, useEffect, useState } from "react";
-import { ApiContext } from "../../context/api.context";
+import { PokedexContext } from "../../context/pokedex.context";
 import AbasDisplay from "../AbasDisplay";
+// images
 import fem from "../../assets/fem.png";
 import mas from "../../assets/mas.png";
+import who from "../../assets/who.png";
 
 const ModalPokedex = () => {
-  const { setModalPokedex, cardSelect, changeImage, listImage, index } = useContext(ApiContext);
+  const { setModalPokedex, cardSelect, changeImage, listImage, index } = useContext(PokedexContext);
   const [isback, setIsBack] = useState(false);
   const [isFem, setIsFem] = useState(false);
   const [isBtnActiveEsq, setBtnActiveEsq] = useState(true);
   const [isBtnActiveDir, setBtnActiveDir] = useState(true);
+  const [loading, setLoading] = useState(true);
+  
 
   useEffect(() => {
     setBtnActiveEsq(true);
@@ -29,7 +31,9 @@ const ModalPokedex = () => {
     setIsBack(false);
     setIsFem(false);
     if(listImage.length > 0){
+
       listImage[index].split("/").forEach((element) => {
+
         if (element == "back") {
           setIsBack(true);
         }
@@ -43,29 +47,22 @@ const ModalPokedex = () => {
   return (
    
     <Container>
-      <figure>
-        <img src={barra} alt="" />
-        <button onClick={() => setModalPokedex(false)}>
-          <Close/>
-        </button>
+
+      <figure className="barra">
+           <button className="btn_close" onClick={() => setModalPokedex(false)}/> 
       </figure>
 
       <div className="box">
-
         <div className="box_pokemon">
-
           <h2>{cardSelect.name}</h2>
           <h5>{isback ? "back" : "front"}</h5>
           <img className="gender_icon" src={isFem ? fem : mas} />
           <figure>
-
             <button
               onClick={() => changeImage("previous")}
               className={isBtnActiveDir ? "btn_esq active" : "btn_esq disabled"}
             />
-
-            {listImage.length > 0 && <img src={listImage[index]} alt="" />}
-            
+            {listImage.length > 0 &&  <img onLoad={() => setLoading(false)}  src={loading ? who : listImage[index]} alt="pokemon" />  }
             <button
               onClick={() => changeImage("next")}
               className={isBtnActiveEsq ? "btn_dir active" : "btn_dir disabled"}
@@ -75,7 +72,6 @@ const ModalPokedex = () => {
 
         </div>
         <AbasDisplay/>
-
         </div>
     </Container>
   );

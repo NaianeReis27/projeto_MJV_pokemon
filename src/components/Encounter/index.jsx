@@ -1,10 +1,10 @@
 import { useContext } from "react";
 import { Container } from "./styles";
-import { ApiContext } from "../../context/api.context";
+import { PokedexContext } from "../../context/pokedex.context";
 
 const Encounter = () => {
    
-  const {encounter} = useContext(ApiContext);
+  const {encounter} = useContext(PokedexContext);
   
   return (
     <Container>

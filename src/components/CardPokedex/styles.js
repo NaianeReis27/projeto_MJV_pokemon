@@ -1,5 +1,6 @@
 
 import styled, { keyframes } from 'styled-components'
+import { fadeIn } from '../../Global';
 
 
 export const Container = styled.li`
@@ -24,11 +25,27 @@ export const Container = styled.li`
     justify-content: center;
     align-items: center;
     margin: -30px 0 0 0;
-    img {
+
+    .loading_img{
+      width: 32px;
+  }
+
+    .pokemon_img {
       width: 70%;
       image-rendering: pixelated;
+      animation: ${fadeIn} .5s ;
     }
+
+    .disable{
+      display: none;
+    }
+    
+    .active{
+      display:block;
+    }
+   
   }
+  
 
   div {
     display: flex;

@@ -1,12 +1,13 @@
 import styled from "styled-components";
 export const Container = styled.div`
+  position: relative;
   display: flex;
-  max-width: 300px;
+  width: 300px;
   flex-direction: column;
-  position: absolute;
-  top: 280px;
+  top: 93px;
+  right: 0;
   left: 0px;
-  right: -958px;
+  right: 0px;
   height: 503px;
   gap: 16px;
   margin: 0 auto;
@@ -18,7 +19,7 @@ export const Container = styled.div`
     rgba(64, 99, 200, 1) 0%,
     rgba(89, 243, 255, 1) 100%
   );
-  border: solid #a80003 6px;
+  border: solid var(--border-color) 6px;
   border-radius: 18px;
 
   figure {

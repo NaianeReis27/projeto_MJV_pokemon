@@ -1,11 +1,11 @@
 import { Container } from "./styles";
 import Icon from "../../assets/pokebolaIcon.svg";
-import { ApiContext } from "../../context/api.context";
+import { PokedexContext } from "../../context/pokedex.context";
 import { useContext } from "react";
 
 const Input = ({ styles }) => {
 
-  const {inputChange, search} = useContext(ApiContext);
+  const {inputChange, search} = useContext(PokedexContext);
 
   return (
     <Container styles={styles}>

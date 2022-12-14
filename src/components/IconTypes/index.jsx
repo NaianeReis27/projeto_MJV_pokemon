@@ -1,7 +1,4 @@
 import { Box } from "./styles";
-import sprite from "../../assets/iconsType.png";
-import { ApiContext } from "../../context/api.context";
-import { useContext, useEffect, useState } from "react";
 
 const IconTypes = ({type, size}) => {
 

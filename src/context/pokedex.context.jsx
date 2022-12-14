@@ -1,9 +1,9 @@
 import { createContext, useState, useEffect } from "react";
 import { api } from "../services/api";
 
-export const ApiContext = createContext({});
+export const PokedexContext = createContext({});
 
-export default function ApiContextProvider({ children }){
+export default function PokedexContextProvider({ children }){
 
   const [cards, setCards] = useState([]);
   const [page, setPage] = useState(0);
@@ -16,7 +16,7 @@ export default function ApiContextProvider({ children }){
   const [listImage, setListImage] = useState([])
   const [index, setIndex] = useState(0)
   const [evolutionsList, setEvolutionList] = useState([])
-  const [list_evolution, set_list_evolution] = useState([])
+  const [listEvolution, setListEvolution] = useState([])
   const [encounter, setEncounter] = useState(null)
   
   
@@ -150,19 +150,19 @@ export default function ApiContextProvider({ children }){
 
 
   const getEvolutionDetails = (url) => {
-    set_list_evolution([])
+    setListEvolution([])
     api
       .get(`${url}`)
       .then((res) => {
         if(res.data.chain.species){
-          set_list_evolution((list_evolution) => [...list_evolution, res.data.chain.species ])
+          setListEvolution((list_evolution) => [...list_evolution, res.data.chain.species ])
           if(res.data.chain.evolves_to[0].species){
-            set_list_evolution((list_evolution) => [...list_evolution, res.data.chain.evolves_to[0].species])
+            setListEvolution((list_evolution) => [...list_evolution, res.data.chain.evolves_to[0].species])
           }
           if(res.data.chain.evolves_to[0].evolves_to.length > 0 ){
-            set_list_evolution((list_evolution) => [...list_evolution, res.data.chain.evolves_to[0].evolves_to[0].species])
+            setListEvolution((list_evolution) => [...list_evolution, res.data.chain.evolves_to[0].evolves_to[0].species])
           }
-          list_evolution.forEach(ele => getCards(ele.name, setEvolutionList))
+          listEvolution.forEach(ele => getCards(ele.name, setEvolutionList))
         }
         
       })
@@ -173,7 +173,7 @@ export default function ApiContextProvider({ children }){
 
 
   return (
-    <ApiContext.Provider
+    <PokedexContext.Provider
       value={{
         loadingImg,
         encounter,
@@ -194,6 +194,6 @@ export default function ApiContextProvider({ children }){
       }}
     >
       {children}
-    </ApiContext.Provider>
+    </PokedexContext.Provider>
   );
 }

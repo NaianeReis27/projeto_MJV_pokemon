@@ -2,10 +2,10 @@ import { Container } from "./styles";
 import CardPokemon from "../CardPokedex";
 import gif from "../../assets/pokemon_loading.webp"
 import { useContext } from "react";
-import { ApiContext } from "../../context/api.context";
+import { PokedexContext } from "../../context/pokedex.context";
 
 const ListCards = ({ img }) => {
-  const {cardsFilter,loading} = useContext(ApiContext)
+  const {cardsFilter,loading} = useContext(PokedexContext)
   return (
     
     <Container>

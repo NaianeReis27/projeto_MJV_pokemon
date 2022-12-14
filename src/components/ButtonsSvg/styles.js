@@ -1,18 +1,16 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-
-  position: absolute;
-  display: flex;
+  position: relative;
   flex-direction: row-reverse;
+  width: 1300px;
+  display: flex;
+  justify-content: flex-end;
   margin: 0 auto;
-  width: 1250px;
+  padding: 0 0 0 250px;
   height:60px;
-  padding-right: 610px;
   gap: 15px;
-  top: 790px;
-  bottom: 0px;
-
+  top:-105px;
   svg {
     fill: none;
     cursor: pointer;

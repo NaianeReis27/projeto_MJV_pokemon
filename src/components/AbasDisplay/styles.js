@@ -4,14 +4,14 @@ import aba2 from "../../assets/aba2.svg";
 
 export const Container = styled.div`
   display: flex;
-  background-color: #6870d8;
-  height: 500px;
-  
+  height: 900px;
+  z-index: 0;
+
   .box{
     position: absolute;
     width: 490px;
     height: 40px;
-    top: 308px;
+    top: 314px;
 
     button {
       width:50%;
@@ -25,12 +25,12 @@ export const Container = styled.div`
     }
   }
 
-  .aba1 {
+  .aba_first {
     background-image: url(${aba});
     z-index: ${({zindex})=> zindex ? 1 : 3};
   }
 
-  .aba2 {
+  .aba_second {
     flex-direction: column;
     background-image: url(${aba2});
     z-index: ${({zindex})=> zindex ? 3: 1};

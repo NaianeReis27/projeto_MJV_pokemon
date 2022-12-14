@@ -1,7 +1,10 @@
-import  styled,{ keyframes } from "styled-components";
+import styled, { keyframes } from "styled-components";
 import display from "../../assets/display.svg";
 import btn_dir from "../../assets/btn_dir.svg";
 import btn_esq from "../../assets/btn_esq.svg";
+import { fadeIn } from "../../Global";
+import barra from "../../assets/barra.png"
+import close from "../../assets/close.png"
 
 
 const scaleUpCenter = keyframes`
@@ -18,21 +21,26 @@ const scaleUpCenter = keyframes`
 `;
 
 export const Container = styled.div`
-  border: solid #a80003 6px;
-  background-color: white;
-  position: absolute;
-  width: 852px;
+  border: solid var(--border-color) 6px;
+  background-color: #6870d8;
+  position: relative;
+  width: 856px;
   height: 470px;
-  top: 314px;
-  right: 372px;
+  top: 119px;
   left: 0px;
   margin: 0 auto;
   overflow: hidden;
-	animation: ${scaleUpCenter} 0.1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  animation: ${scaleUpCenter} 0.1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 
+  .barra{
+    background-image: url(${barra});
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 90px;
+  }
 
   figure {
-    svg {
+    .btn_close{
       margin: 10px;
       width: 30px;
       height: 30px;
@@ -42,14 +50,13 @@ export const Container = styled.div`
       position: absolute;
       background-color: none;
       border: none;
-    }
-    img {
-      width: 100%;
+      background-image: url(${close});
+      background-size: 100%;  
     }
   }
-  
-  .box{
-    margin-top: -27px;
+
+  .box {
+    margin-top: -34px; 
   }
 
   div {
@@ -62,6 +69,7 @@ export const Container = styled.div`
       position: absolute;
       color: black;
       font-size: 25px;
+      font-weight: 500px;
     }
 
     .gender_icon {
@@ -84,13 +92,13 @@ export const Container = styled.div`
       background-repeat: no-repeat, no-repeat;
       background-image: url(${display});
       background-position: bottom;
+      background-color: white;
     }
 
     div {
       height: 435px;
       background-size: 350px;
       color: black;
-      
 
       figure {
         display: flex;
@@ -99,7 +107,13 @@ export const Container = styled.div`
         align-items: center;
         margin-top: 65px;
         height: 200px;
-        z-index:5;
+        z-index: 5;
+
+        img {
+          width: 65%;
+          image-rendering: pixelated;
+          animation: ${fadeIn} 0.5s;
+        }
 
         .btn_dir {
           background-image: url(${btn_dir});
@@ -124,11 +138,6 @@ export const Container = styled.div`
           cursor: pointer;
           border: none;
           background: none;
-        }
-
-        img {
-          width: 60%;
-          image-rendering: pixelated;
         }
       }
     }

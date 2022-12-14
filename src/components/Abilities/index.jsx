@@ -1,14 +1,17 @@
 import { useContext } from "react";
 import { Container } from "./styles";
-import { ApiContext } from "../../context/api.context";
+import { PokedexContext } from "../../context/pokedex.context";
 import { useState } from "react";
 import { useEffect } from "react";
 const Abilities = ({ data }) => {
-  const { getAbilities } = useContext(ApiContext);
+  
+  const { getAbilities } = useContext(PokedexContext);
   const [description, setDescription] = useState(null);
+
   useEffect(() => {
     getAbilities(data.ability.name, setDescription);
   }, []);
+
   console.log(description);
   return (
     description && (

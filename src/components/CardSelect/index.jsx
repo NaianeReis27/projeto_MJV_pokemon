@@ -1,11 +1,11 @@
-import { ApiContext } from "../../context/api.context";
+import { PokedexContext } from "../../context/pokedex.context";
 import { useContext } from "react";
 import { Container } from "./styles";
 import InfoCard from "../InfoCard";
 import IconTypes from "../IconTypes";
 
 const CardSelect = () => {
-  const { cardSelect , setModalPokedex } = useContext(ApiContext);
+  const { cardSelect , setModalPokedex } = useContext(PokedexContext);
   
   return (
     <Container>
