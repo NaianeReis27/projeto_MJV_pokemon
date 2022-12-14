@@ -21,10 +21,20 @@ export const Container = styled.ul`
   top: 119px;
   border: solid var(--border-color) 6px;
 
+
   &::-webkit-scrollbar {
-    display: none;
+    width: 16px;
   }
 
+  &::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #fbd513;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+  }
   div {
     img {
       width: 200px;
