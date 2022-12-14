@@ -82,7 +82,7 @@ export const Section = styled.section`
 
 export const Aside = styled.aside`
 
-height: 900px;
+height: 1000px;
 margin-top: 40px;
 margin: 20px;
 width: 275px;
@@ -111,6 +111,19 @@ h3 {
   width:70px;
   margin-left: 10px;
 }
+
+.icones {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:#1F2773;
+}
+a {
+  height: 40px;
+  width: 40px;
+
+}
+
 
 .treinadora {
   height: 100px;
